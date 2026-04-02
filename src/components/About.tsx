@@ -113,7 +113,7 @@ export default function About() {
             <div className="space-y-4 text-zinc-400 leading-relaxed text-[15px]">
               <p>
                 Sou um engenheiro de software com sede em São Paulo, especializado em sistemas de IA,
-                automação de processos e integrações enterprise. Atualmente trabalho como Systems Analyst
+                automação de processos e integrações enterprise. Trabalhei como Systems Analyst
                 na <span className="text-cyan-400 font-medium">Samsung SDS Latin America</span>, onde construo
                 soluções inteligentes que reduzem fricção operacional em escala.
               </p>

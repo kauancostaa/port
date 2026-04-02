@@ -305,7 +305,7 @@ export default function Hero() {
               transition={{ delay: 1.1 }}
               className="absolute -bottom-5 -left-5 glass rounded-xl px-4 py-3 border border-cyan-400/20"
             >
-              <div className="font-mono text-[10px] text-zinc-500 mb-0.5">Current role</div>
+              <div className="font-mono text-[10px] text-zinc-500 mb-0.5">Last role</div>
               <div className="font-['Syne',sans-serif] font-semibold text-sm text-white">Samsung SDS</div>
               <div className="font-mono text-[10px] text-cyan-400">Systems Analyst</div>
             </motion.div>
