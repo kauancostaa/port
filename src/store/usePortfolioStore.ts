@@ -1,19 +1,15 @@
 // src/store/usePortfolioStore.ts
-// Zustand store centraliza: filtro de tecnologias e tema (claro/escuro).
-// Tema persiste no localStorage automaticamente.
+// Q13: Removido light mode — só dark mode agora
+// Q26: Hook sempre usado (nunca getState() direto no JSX)
+// Q27: classList manipulado só no useEffect do App, não na store
 
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 interface PortfolioState {
-  // Filtro de tecnologias
   activeFilters: string[];
   toggleFilter: (tech: string) => void;
   clearFilters: () => void;
-
-  // Tema
-  theme: 'dark' | 'light';
-  toggleTheme: () => void;
 }
 
 export const usePortfolioStore = create<PortfolioState>()(
@@ -29,21 +25,9 @@ export const usePortfolioStore = create<PortfolioState>()(
         })),
 
       clearFilters: () => set({ activeFilters: [] }),
-
-      theme: 'dark',
-
-      toggleTheme: () =>
-        set((state) => {
-          const next = state.theme === 'dark' ? 'light' : 'dark';
-          // Aplica a classe no <html> para o Tailwind darkMode: 'class' funcionar
-          document.documentElement.classList.toggle('dark', next === 'dark');
-          return { theme: next };
-        }),
     }),
     {
       name: 'portfolio-store',
-      // Só persiste o tema (não faz sentido persistir filtros)
-      partialize: (state) => ({ theme: state.theme }),
     }
   )
 );
