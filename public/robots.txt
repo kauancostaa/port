@@ -1,0 +1,5 @@
+# Q36: robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://kauancosta.dev/sitemap.xml
