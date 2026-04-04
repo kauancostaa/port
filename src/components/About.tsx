@@ -45,7 +45,7 @@ const CERTS = [
   {l:'AWS Certified Developer – Associate', v:true},
   {l:'Spring Professional',                 v:true},
   {l:'Scrum Master',                        v:true},
-  {l:'CKAD (Kubernetes for Developers)',    v:null},
+  {l:'CKAD (Kubernetes for Developers)',    v:true},
 ];
 
 const up = (i=0) => ({ hidden:{opacity:0,y:24}, visible:{opacity:1,y:0,transition:{delay:i*.09,duration:.6,ease:[0.19,1,0.22,1]}} });
